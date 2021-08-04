@@ -1,0 +1,71 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Services{% endblock title %}
+
+
+{% block content %}
+
+<p> เป็นการทดลองเรียน <a href="https://web.facebook.com/">
+Facebook</a></p>
+    
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h5 class="my-0 fw-normal">Free</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Advise operate machine</li>
+              <li>Advise maintenance machine</li>
+              <li>Advise solving</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h5 class="my-0 fw-normal">Basic</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Audit machine 1 time/month</li>
+              <li>Remote to solving 2 time/month</li>
+              <li>Discount spare part 5%</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h5 class="my-0 fw-normal">Enterprise</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Audit machine 2 time/month</li>
+              <li>Remote to solving 4 time/month</li>
+              <li>Discount spare part 10%</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+{% endblock content %}
+
+{% block link %}
+  <li class="mb-1"><a class="link-secondary text-decoration-none" href="{% url 'home-page' %}">Home</a></li>
+{% endblock link %}

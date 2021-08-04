@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock title %}
+
+
+{% block content %}
+
+
+{% if status %}
+
+	{% if status == 'success' %}
+		<div class="alert alert-success">
+  			<strong>Success!</strong> ทางเราได้รับข้อมูลเรียบร้อยแล้ว จะติดต่อกลับ ขอบคุณครับ
+		</div>
+
+	{% else %}
+
+		<div class="alert alert-warning">
+  			<strong>Warning!</strong> กรุณาบันทึกให้ครบทุกช่อง ขอบคุณครับ
+		</div>
+	{% endif %}
+
+{% endif %}
+
+<div class="container">
+	
+	<form method="POST">
+		{% csrf_token %}
+
+		<div class="form-group">
+			<label for="title" >Topic</label>	
+			<input class="form-control" type="text" name="title" id="title">
+		</div><br>
+
+		<div class="form-group">
+			<label for="email" >Email</label>	
+			<input class="form-control" type="text" name="email" id="email">
+		</div><br>
+
+		<div class="form-group">
+			<label for="detail" >Description</label>	
+			<textarea class="form-control" rows="5" id="detail" name="detail"></textarea>
+		</div><br>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+
+	</form>
+
+</div>
+
+
+{% endblock content %}
